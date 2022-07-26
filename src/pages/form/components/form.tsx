@@ -72,6 +72,7 @@ const PolicyForm: React.FC = () => {
             : 0,
       }));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values?.age, values.country, values.package]);
 
   return (
