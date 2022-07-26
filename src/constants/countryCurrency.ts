@@ -1,9 +1,9 @@
 interface ICountryCurrencyMapping {
-  [value: string]: string;
+  [country: string]: string;
 }
 
 interface ICountryRateMapping {
-  [value: string]: number;
+  [country: string]: number;
 }
 
 export const COUNTRY_CURRENCY_MAPPING: ICountryCurrencyMapping = {

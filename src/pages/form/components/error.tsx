@@ -14,7 +14,7 @@ const Error: React.FC = () => {
   return (
     <>
       <h1 className="text-4xl font-extrabold">Ooops</h1>
-      <p className="mt-5 text-center">
+      <p className="mt-5 text-center" data-testid="error_info">
         Your age is over our ccepted limit. <br />
         We are sorry but we cannot insure you now.
       </p>
