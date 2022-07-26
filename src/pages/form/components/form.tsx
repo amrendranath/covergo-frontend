@@ -17,7 +17,18 @@ const PolicyForm: React.FC = () => {
   const { values, setValues } = useContext(FormWizardContext);
   const [packagePrice, setPackagePrice] = useState<IPackagePrice>({ Standard: 0, Safe: 0, "Super Safe": 0 });
 
+  const isEmptyForm = () => {
+    if (!values.name || !values.age || !values.country || !values.package) {
+      return true;
+    }
+    return false;
+  };
+
   const handleNext = () => {
+    if (isEmptyForm()) {
+      alert("Fill all fields completely.");
+      return;
+    }
     if (values.age > 100) {
       setValues((preState: IFormWizardContextState) => ({ ...preState, isError: true }));
     } else {

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { FormWizardContext } from "../../../contexts/formWizardContext";
 
 const Error: React.FC = () => {
   const navigate = useNavigate();
+  const { initialState, setValues } = useContext(FormWizardContext);
 
   const handleBtnClick = () => {
     navigate("/");
+    setValues(initialState);
   };
 
   return (

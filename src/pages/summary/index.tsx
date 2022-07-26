@@ -4,10 +4,11 @@ import { FormWizardContext } from "../../contexts/formWizardContext";
 
 const Summary: React.FC = () => {
   const navigate = useNavigate();
-  const { values } = useContext(FormWizardContext);
+  const { values, initialState, setValues } = useContext(FormWizardContext);
 
   const handleBuy = () => {
     navigate("/");
+    setValues(initialState);
   };
 
   const handleBack = () => {

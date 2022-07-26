@@ -13,6 +13,7 @@ export interface IFormWizardContextState {
 }
 
 export interface IContextInitialValues {
+  initialState: IFormWizardContextState;
   values: IFormWizardContextState;
   setValues: Function;
 }

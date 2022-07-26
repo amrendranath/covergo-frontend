@@ -4,7 +4,7 @@ import { IFormWizardContextProps, IContextInitialValues } from "./types";
 export const FormWizardContext = createContext({} as IContextInitialValues);
 
 const FormWizardProvider: React.FC<IFormWizardContextProps> = ({ children }) => {
-  const [formValues, setFormValues] = useState({
+  const initialState = {
     name: "",
     age: 0,
     country: "",
@@ -12,9 +12,14 @@ const FormWizardProvider: React.FC<IFormWizardContextProps> = ({ children }) => 
     package: "",
     premium: "",
     isError: false,
-  });
+  };
+  const [formValues, setFormValues] = useState(initialState);
 
-  return <FormWizardContext.Provider value={{ values: formValues, setValues: setFormValues }}>{children}</FormWizardContext.Provider>;
+  return (
+    <FormWizardContext.Provider value={{ initialState, values: formValues, setValues: setFormValues }}>
+      {children}
+    </FormWizardContext.Provider>
+  );
 };
 
 export default FormWizardProvider;
