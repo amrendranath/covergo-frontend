@@ -52,3 +52,5 @@ Since It was a test project, I tried the simple and basic architecture for manag
 3. For The Form page, I divided it into two separate components `PolicyForm` and `Error`. Error component will show when age is over 100. Initially, I show the form component that is used for setting the states.
 4. All the calculations related to premium, package selection, country, age, and name will be done on `form.tsx` file.
 5. After that I wrote tests for every component.
+
+### Video Demo [Click Here](https://www.loom.com/share/9273bd03a06a4712b8b89edeecbf149f)
